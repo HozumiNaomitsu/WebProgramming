@@ -3,10 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <title>title</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="User_itiran.css">
 </head>
+
 <body>
-<h1 class="User_itiran">ユーザ 一覧</h1>
+	<nav class="navbar navbar-dark bg-dark">
+   		<a class="navbar-brand" href="#">ユーザ名さん</a>
+		<a href="#" class="btn-border-bottom">ログアウト</a>
+	</nav>
+
+		<h1 class="User_itiran">ユーザ 一覧</h1>
+
+		<div align="right">
+	<p>
+			<a href="#" class="btn-border-bottom">新規登録</a>
+	</p>
+		</div>
 
 	<div class="center">
 		<p>
@@ -16,19 +29,61 @@
 			ユーザ名<input type="text" name="example2" size="25" maxlength="20">
 		</p>
 		<p>
-			生年月日<input type="date" name="example3" value="2000-01-01">～
-			<input type="date" name="example3" value="2000-01-01">
+			生年月日<input type="date" name="example3" value="1800/01/01">～
+			<input type="date" name="example3" value="1800/01/01">
 		</p>
 
 	</div>
 
-	<div class="migihasi">
+	<div align="right">
 		<p>
 		<input type="submit" value="検索">
 		</p>
 	</div>
 
+	<table class="table">
+	<thead>
+    	<tr>
+      		<th scope="col">ユーザID</th>
+      		<th scope="col">ユーザ名</th>
+      		<th scope="col">生年月日</th>
+      		<th scope="col">詳細・更新・削除</th>
+    	</tr>
+ 	</thead>
 
+ 	<tbody>
+   	 	<tr>
+     		 <th scope="row">id0001</th>
+      		<td>緋村　剣心</td>
+      		<td>1849年6月20日</td>
+      	<td>
+       		<input type="button" value="詳細">
+       		<input type="button" value="更新">
+       		<input type="button" value="削除">
+      	</td>
+   		</tr>
 
+    	<tr>
+      		<th scope="row">id0002</th>
+      		<td>斎藤　一</td>
+      		<td>1844年2月18日</td>
+      	<td> <input type="button" value="詳細">
+       		<input type="button" value="更新">
+       		<input type="button" value="削除">
+      	</td>
+    	</tr>
+
+    	<tr>
+      		<th scope="row">id0003</th>
+      		<td>勝　海舟</td>
+      		<td>1823年3月12日</td>
+      	<td>
+       		<input type="button" value="詳細">
+       		<input type="button" value="更新">
+       		<input type="button" value="削除">
+       	</td>
+    	</tr>
+	</tbody>
+</table>
 </body>
 </html>

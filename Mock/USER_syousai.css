@@ -1,0 +1,13 @@
+.USER_syousai{
+	text-align: center;
+	background-color: silver;
+}
+div{
+	padding: 20px;
+	color: gold;
+}
+div.right{
+	text-align:right;
+	padding: 20px;
+	color: gold;
+}

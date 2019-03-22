@@ -1,9 +1,12 @@
 .User_itiran{
 	text-align: center;
-	background-color: red;
+	background-color: turquoise;
 }
 div.center{
-	text-align:center;
-	padding: 20px;
-	color: red;
+	text-align: center;
+}
+
+div.right{
+	text-align:right;
+
 }

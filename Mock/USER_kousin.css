@@ -1,0 +1,17 @@
+.USER_kousin{
+	text-align: center;
+	background-color: silver;
+
+}
+div{
+	padding: 20px;
+	color: gold;
+}
+div.right{
+	text-alige:right;
+	padding: 20px;
+	color: gold;
+}
+div.center{
+text-alige:center;
+}

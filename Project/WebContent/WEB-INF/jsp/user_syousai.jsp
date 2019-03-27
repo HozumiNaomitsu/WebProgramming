@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>title</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+<link rel="stylesheet" href=css/"USER_syousai.css">
+
+</head>
+
+<body>
+	<nav class="navbar navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">ユーザ名さん</a> <a href="#"
+			class="btn-border-bottom">ログアウト</a>
+	</nav>
+
+	<h1 class="USER_syousai">ユーザ情報詳細</h1>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<form>
+
+					<div class="form-group row">
+						<label for="staticEmail" class="col-sm-2 col-form-label">ユーザID</label>
+						<div class="col-sm-10">
+							<input type="text" readonly class="form-control-plaintext"
+								id="staticEmail" value=id0001>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label for="staticEmail" class="col-sm-2 col-form-label">ユーザ名</label>
+						<div class="col-sm-10">
+							<input type="text" readonly class="form-control-plaintext"
+								id="staticEmail" value="緋村　剣心">
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label for="staticEmail" class="col-sm-2 col-form-label">生年月日</label>
+						<div class="col-sm-10">
+							<input type="date" readonly class="form-control-plaintext"
+								id="staticEmail" value="1849年06月20日">
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label for="staticEmail" class="col-sm-2 col-form-label">登録日時</label>
+						<div class="col-sm-10">
+							<input type="text" readonly class="form-control-plaintext"
+								id="staticEmail" value="1850年01月01日　4時44分">
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label for="staticEmail" class="col-sm-2 col-form-label">更新日時</label>
+						<div class="col-sm-10">
+							<input type="text" readonly class="form-control-plaintext"
+								id="staticEmail" value="1850年08月30日　4時44分">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<a href="#" class="btn-border-bottom">戻る</a>
+	</div>
+</body>
+
+</html>

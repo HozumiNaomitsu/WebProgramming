@@ -28,7 +28,69 @@ CREATE TABLE user
 	 'admin',
 	 'ä«óùé“',
 	 '1000-10-10',
-	 'naopyuta',
+	 'password',
 	  now(),
 	  now()
 	 );
+	 
+	  INSERT INTO user
+ (
+     id,
+	 login_id,
+	 name,
+     birth_date,
+	 password,
+	 create_date,
+	 update_date
+	 )
+	 VALUES
+	 (
+	 2,
+	 'takano',
+	 'takano',
+	 '1000-10-10',
+	 'password',
+	  now(),
+	  now()
+	 );
+	 INSERT INTO user
+ (
+     id,
+	 login_id,
+	 name,
+     birth_date,
+	 password,
+	 create_date,
+	 update_date
+	 )
+	 VALUES
+	 (
+	 3,
+	 'himura',
+	 'îÍë∫',
+	 '1000-10-10',
+	 'password',
+	  now(),
+	  now()
+	 );
+INSERT INTO user
+ (
+     id,
+	 login_id,
+	 name,
+     birth_date,
+	 password,
+	 create_date,
+	 update_date
+	 )
+	 VALUES
+	 (
+	 4,
+	 'saitou',
+	 'ç÷ì°',
+	 '1000-10-10',
+	 'password',
+	  now(),
+	  now()
+	 );
+

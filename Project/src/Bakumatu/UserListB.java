@@ -54,10 +54,11 @@ public class UserListB extends HttpServlet {
 		// パラメータ取得
 		String loginId = request.getParameter("loginId");
 		String name = request.getParameter("name");
-
+		String birthDate = request.getParameter("birthDate");
+		String birthDate1 = request.getParameter("birthDate1");
 		//
 		UserDao UserDao = new UserDao();
-		List<User> Iciran = UserDao.kensaku(loginId,name);
+		List<User> Iciran = UserDao.kensaku(loginId,name,birthDate,birthDate1);
 
 		//JavaからJSPに送る
 		request.setAttribute("usericiran", Iciran);

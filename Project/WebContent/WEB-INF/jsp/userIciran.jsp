@@ -93,26 +93,23 @@
 						<!-- 管理者でログインしている場合、詳細・更新・削除を表示 -->
 						<c:if test="${userInfo.loginId == 'admin'}">
 							<td>
-								<!--詳細(サーブレット)  --> <a class="btn btn-primary"
-								href="MoredetailB?id=${user.id}">詳細</a> <!--更新(サーブレットの )--> <a
-								class="btn btn-success" href="UpdateB?id=${user.id}">更新</a> <!--削除(サーブレット  )-->
-								<a class="btn btn-danger" href="DeleteB?id=${user.id}">削除</a>
+								<!--詳細(サーブレット)  --> <a class="btn btn-primary"href="MoredetailB?id=${user.id}">詳細</a>
+								 <!--更新(サーブレットの )--> <a class="btn btn-success" href="UpdateB?id=${user.id}">更新</a>
+								 <!--削除(サーブレット  )--><a class="btn btn-danger" href="DeleteB?id=${user.id}">削除</a>
 							</td>
 						</c:if>
 						<!-- 一般ユーザでログインしているかつ、自分の情報の場合、詳細・更新を表示  -->
 						<c:if
 							test="${userInfo.loginId != 'admin' && userInfo.loginId == user.loginId}">
 							<td>
-								<!--詳細(サーブレット)  --> <a class="btn btn-primary"
-								href="MoredetailB?id=${user.id}">詳細</a> <!--更新(サーブレット  )--> <a
-								class="btn btn-success" href="UpdateB?id=${user.id}">更新</a>
+								<!--詳細(サーブレット)  --> <a class="btn btn-primary"href="MoredetailB?id=${user.id}">詳細</a>
+								 <!--更新(サーブレット  )--> <a class="btn btn-success" href="UpdateB?id=${user.id}">更新</a>
 							</td>
 						</c:if>
 						<!-- 一般ユーザでログインしているかつ、自分ではない情報の場合、詳細を表示、 -->
 						<c:if
 							test="${userInfo.loginId != 'admin' && userInfo.loginId != user.loginId}">
-							<td><a class="btn btn-primary"
-								href="MoredetailB?id=${user.id}">詳細</a></td>
+							<td><a class="btn btn-primary"href="MoredetailB?id=${user.id}">詳細</a></td>
 						</c:if>
 
 						<!--GetParameterのリンク　これで個々のボタンが繋がる  -->

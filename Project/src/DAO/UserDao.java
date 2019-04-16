@@ -120,7 +120,7 @@ public class UserDao {
 	}
 
 	//★ユーザ一覧の検索メソッド
-	public List<User> kensaku(String loginId, String name) {
+	public List<User> kensaku(String loginId, String name,String birthDate,String  birthDate1) {
 		Connection conn = null;
 
 		List<User> userList = new ArrayList<User>();
@@ -130,31 +130,44 @@ public class UserDao {
 			conn = DBManager.getConnection();
 			//確認済みのSQL、荷物を作る。
 			//adminではない処理が必要　データベースのテキストに書いてある。
-			String sql = "SELECT * FROM user WHERE name like ?";
+			String sql = "SELECT * FROM user WHERE login_id !='admin'";
 
-			PreparedStatement pt = conn.prepareStatement(sql);
-			pt.setString(1, "%" + name + "%");
-			ResultSet rs = pt.executeQuery();
-
-			//ここから先は違う書き方
-			//コンストラクタを作るとエラーが消える。
-			/*if (!rs.next()) {
-				return null;
-				String loginIdDate = rs.getString("login_id");
-				String nameData = rs.getString("name");
-				return new List<User>(loginIdDate,nameData);
+			if (!loginId.equals("")) {
+				sql += " AND login_id ='" + loginId + "'";
 			}
-*/
-			User user = new User();
+
+			if (!name.equals("")) {
+				sql += " AND name like '%"+name+"%'";
+			}
+
+			if (!birthDate.equals("")) {
+				sql += " AND birth_Date >='" + birthDate + "'";
+			}
+
+			if (!birthDate1.equals("")) {
+				sql += " AND birth_Date <='" + birthDate1 + "'";
+			}
+			System.out.println(sql);
+
+			Statement pt = conn.createStatement();
+			ResultSet rs = pt.executeQuery(sql);
+
 			while (rs.next()) {
+				User user = new User();
+
 				user.setLoginId(rs.getString("login_id"));
 				user.setName(rs.getString("name"));
 				user.setBirthDate(rs.getDate("birth_date"));
+				user.setPassword(rs.getString("password"));
+				user.setCreateDate(rs.getString("create_date"));
+				user.setUpdateDate(rs.getString("update_date"));
+
+
+				//上のuserListに入る。
+				userList.add(user);
 			}
 
 
-			//上のuserListに入る。
-			userList.add(user);
 
 			//データベース切断
 
@@ -394,7 +407,7 @@ public class UserDao {
 			}
 		}
 	}
-
+	//暗号化のメソッド
 	public String encryption(String password) {
 		String pass = "";
 		try {
